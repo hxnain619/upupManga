@@ -1,0 +1,43 @@
+
+@import 'partials/globalStyles' ;
+
+/*
+    Header
+*/
+
+header{
+    height:50%;
+    position: relative;
+    background:url('../../images/manga-image.jpg') center / cover no-repeat;  
+}
+
+
+@media only screen and (max-height:600px) and (orientation:landscape){
+    header{
+        height: 55%;
+    }
+}
+
+
+/*card styles*/
+
+.mangas-image-container{
+    padding-top:2em;
+    .card-content{
+        a.btn-small{
+            margin-top:1em;
+            margin-bottom:0.5em;
+        }
+        .card-hero-title{
+            margin-bottom:0.5em;
+        }
+    }
+    
+}
+
+/*temp*/
+.card-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

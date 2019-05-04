@@ -1,0 +1,106 @@
+
+@import 'partials/globalStyles' ;
+
+header{
+    height:45%;
+    position: relative;
+    background:url('../../images/manga-bio.jpg')  center / cover no-repeat;
+}
+
+@media only screen and (max-height:600px) and (orientation:landscape){
+    header{
+        height: 55%;
+    }
+}
+
+.manga-bio{
+    padding-top:3em;
+    padding-bottom:3em;
+
+    p{
+        margin-bottom:2.5em;
+    }
+
+    .manga-poster-container{
+        position: relative;
+        height: 350px;
+        width:100%;
+        margin-top:1em;
+        border-radius: 30px;
+        box-shadow:$shadow-2;
+        transform: translateY(0px);
+        transition:transform 150ms ease 0s;
+
+        &:hover{
+            transform:translateY(-2px);
+        }
+
+    }
+
+    .genre-container{
+        padding-left:4em;
+    }
+
+    h3 , h4{
+        font-family: "b612","roboto",$fallback-fonts;
+        @extend .capitalize-text;
+    }
+    h5{
+        @extend .capitalize-text;
+    }
+
+    table{
+        margin-bottom:1.5em;
+        tr{
+            td{
+
+                &::first-letter{
+                    @extend .capitalize-text;
+                }
+
+                &:nth-child(1){
+                    font-weight: 600;
+                }
+                
+            }
+            
+        }
+    }
+
+
+}
+
+.collection{
+    .collection-item{
+        a{
+            padding:15px 15px 15px 30px;  
+        }
+    }
+}
+
+
+.sub-header-container{
+    >h4{
+        +.divider{
+            margin-bottom:2em;
+        }    
+    }
+}
+
+/*temp*/
+
+.manga-poster-container{
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width:992px){
+    h3{
+        font-size:2.6rem;
+    }
+    .genre-container{
+        padding-left:0em!important;
+    }
+}

@@ -1,0 +1,44 @@
+
+@import 'partials/globalStyles'; 
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.full-page-container{
+    position: relative;
+    width:100%;
+    height: 100%;
+    background:url('../../images/not-found.jpg') center / cover no-repeat;
+    color:#fff;
+    z-index: 2;
+
+    &::after{
+        content:'';
+        position: absolute;
+        width:100%;
+        height: 100%;
+        top:0;
+        left:0;
+        background: $purple-overlay-lighten;
+        z-index: -1;    
+        opacity: 0.7;
+    }
+
+    .content{
+        position: absolute;
+        width:100%;
+        left:0;
+        top:40%;
+        transform:translateY(-40%);
+        text-align: center;
+        padding-left:2em;
+        padding-right:2em;
+        @extend .capitalize-text;
+    }
+    h3{
+        font-family: "b612","roboto",$fallback-fonts;
+    }
+    
+}

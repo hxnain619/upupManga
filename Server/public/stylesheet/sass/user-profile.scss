@@ -1,0 +1,83 @@
+
+@import 'partials/globalStyles' ;
+
+header{
+    height:45%;
+    position: relative;
+    background:url('../../images/login-cover.jpg') center / cover no-repeat;
+}
+
+@media only screen and (max-height:600px) and (orientation:landscape){
+    header{
+        height: 55%;
+    }
+}
+
+
+ul.tabs{
+    flex-direction: column;
+    height: 100%;
+    float:left;
+    width:100%;
+
+    .indicator{
+            display:none;
+    }
+    .tab{
+        margin-top:0.25em;
+        margin-bottom:0.25em;
+    }
+    .tab a{
+        color:$purple!important;
+    }
+    .tab a.active{
+            color:#fff!important;
+            background:$purple!important;
+            box-shadow:$small-btn-shadow!important;
+        
+    }
+}
+
+h3{
+    @extend .capitalize-text;
+    font-family: "b612","roboto",$fallback-fonts;
+}
+
+#detail-main-container{
+    border:2px solid #eee;
+    padding:4em;
+    .content-header{
+        text-align: center;
+        @extend .capitalize-text;
+        .user-img{
+            position: relative;
+            width:100px;
+            height:100px;
+            border-radius: 50%;
+            box-shadow:$small-btn-shadow;
+            left:50%;
+            transform:translateX(-50%);
+            margin-bottom:1em;
+            background-size:cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #member-info{
+            font-size:14px;
+            font-weight: 500;
+        }
+    }
+    table{
+        margin-top:1em;
+        tr{
+            td{
+                &:nth-child(1){
+                    font-weight: 500;
+                    @extend .capitalize-text;
+                }
+            }
+        }
+    }
+}
+
+
